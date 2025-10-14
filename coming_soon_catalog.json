@@ -1,0 +1,8 @@
+{
+  "aliases": {
+    "jeamlit": {
+      "script-ref": "io.jeamlit:jeamlit:0.44.0:all@fatjar",
+      "java": "21+"
+    }
+  }
+}
