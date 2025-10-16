@@ -1,0 +1,3 @@
+# JBang Catalog for Jeamlit 
+
+This is a catalog of JBang scripts for running jeamlit projects.
