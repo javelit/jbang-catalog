@@ -1,7 +1,7 @@
 {
     "aliases": {
       "jeamlit": {
-        "script-ref": "io.jeamlit:jeamlit:0.44.0:all",
+        "script-ref": "io.jeamlit:jeamlit:0.44.0:0.45.0",
         "java": "21+"
       }
     }
