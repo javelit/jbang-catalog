@@ -8,7 +8,7 @@
       "fileMatch": "\\.java",
       "matchStrings": [
         "//DEPS (?<depName>\\S+):(\\${\\S+:(?<currentValue>[^ }]+)})",
-        "//DEPS ((?<depName>\\S+:\\S+):(?<currentValue>[^$:@]+))(:[^@]+)?(\\@\\w+)?"
+        "//DEPS ((?<depName>\\S+:\\S+):(?<currentValue>[^:@]+))(:[^@]+)?(\\@\\w+)?"
       ],
       "datasourceTemplate": "maven"
     },
@@ -16,7 +16,7 @@
       "fileMatch": ".?jbang-catalog.json",
       "matchStrings": [
         "\"(?<depName>\\S+):(\\${\\S+:(?<currentValue>[^ }]+)})\"",
-        "\"((?<depName>\\S+:\\S+):(?<currentValue>[^$:@]+))(:[^@]+)?(\\@\\w+)?\""
+        "\"((?<depName>\\S+:\\S+):(?<currentValue>[^:@]+))(:[^@]+)?(\\@\\w+)?\""
       ],
       "datasourceTemplate": "maven"
     }
