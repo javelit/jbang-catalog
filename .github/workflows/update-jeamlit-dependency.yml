@@ -1,4 +1,4 @@
-name: Update Jeamlit Dependency
+name: Update Javelit Dependency
 
 on:
   schedule:
@@ -14,11 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Fetch latest Jeamlit version from Maven Central
+      - name: Fetch latest Javelit version from Maven Central
         id: get-version
         run: |
           # Fetch maven-metadata.xml
-          METADATA_URL="https://repo1.maven.org/maven2/io/jeamlit/jeamlit/maven-metadata.xml"
+          METADATA_URL="https://repo1.maven.org/maven2/io/javelit/javelit/maven-metadata.xml"
           METADATA=$(curl -s "$METADATA_URL")
 
           # Extract latest version (prefer <release> over <latest>)
@@ -38,8 +38,8 @@ jobs:
         run: |
           VERSION="${{ steps.get-version.outputs.version }}"
 
-          # Update jeamlit version in: io.jeamlit:jeamlit:X.Y.Z:all@fatjar
-          sed -i "s/io\.jeamlit:jeamlit:[0-9.]\+:all/io.jeamlit:jeamlit:$VERSION:all/g" jbang-catalog.json
+          # Update javelit version in: io.javelit:javelit:X.Y.Z:all@fatjar
+          sed -i "s/io\.javelit:javelit:[0-9.]\+:all/io.javelit:javelit:$VERSION:all/g" jbang-catalog.json
 
       - name: Check for changes
         id: check-changes
@@ -59,5 +59,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add jbang-catalog.json
-          git commit -m "chore: update jeamlit dependency to $VERSION"
+          git commit -m "chore: update javelit dependency to $VERSION"
           git push
