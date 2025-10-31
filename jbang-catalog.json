@@ -1,7 +1,7 @@
 {
     "aliases": {
       "javelit": {
-        "script-ref": "io.javelit:javelit:0.58.0:all@fatjar",
+        "script-ref": "io.javelit:javelit:0.60.0:all@fatjar",
         "java": "21+"
       }
     }
